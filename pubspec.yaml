@@ -1,0 +1,60 @@
+name: road_rescue
+description: "RoadRescue — roadside assistance and emergency response."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  audioplayers: ^6.7.1
+  flutter:
+    sdk: flutter
+
+  flutter_map: ^8.3.2
+  flutter_riverpod: ^3.3.2
+  geolocator: ^14.0.2
+  go_router: ^17.2.3
+  image_picker: ^1.2.2
+  latlong2: ^0.10.1
+  path_provider: ^2.1.5
+  pdf: ^3.12.0
+  permission_handler: ^13.0.2
+  printing: ^5.14.3
+  record: ^6.2.1
+  shared_preferences: ^2.5.5
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/onboarding/
+    - assets/images/home/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+
+dependency_overrides:
+  # 14.x needs a newer Kotlin Gradle setup than this project uses.
+  permission_handler_android: 13.0.1
+  # image 4.11 (via pdf) needs a newer archive than the SDK-pinned 4.0.9.
+  image: 4.5.4
+
